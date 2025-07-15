@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Instrucciones de Decodificación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #444;
+        }
+        code {
+            background-color: #eaeaea;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Instrucciones de Decodificación</h1>
+    <p>Este sistema de codificación oculta un mensaje utilizando tres símbolos: <code>;</code>, <code>:</code> y <code>?</code>, que indican qué letra tomar de la frase que sigue a dicho símbolo.</p>
+
+    <h2>Reglas de extracción:</h2>
+    <ul>
+        <li><strong>;</strong> → Toma la <strong>ultima letra</strong> del la palabra que tiene el símbolo.</li>
+        <li><strong>:</strong> → Toma la <strong>siguiente letra</strong> del la palabra que tiene el símbolo.</li>
+        <li><strong>?</strong> → Toma la <strong>primeraletra</strong> de la frase con el símbolo.</li>
+    </ul>
+
+    <p>Las <strong>comas</strong> (<code>,</code>) y otros signos <strong>no afectan</strong> al sistema de codificación.</p>
+
+    <p>Para decodificar el mensaje oculto, lee el texto completo y extrae las letras según las reglas anteriores, en orden de aparición de los símbolos.</p>
+
+    <p><em>Ejemplo:</em></p>
+    <pre>
+Texto: "Lo hice; Aunque dudaba: ¿No estaba seguro? Pero; confié."
+→ : → "Aunque dudaba: No" → n
+→ ; → "Lo hice; Aunque dudaba" → e
+→ ? → "¿No estaba seguro?" → n
+Mensaje oculto: "nen"
+    </pre>
+</body>
+</html>
